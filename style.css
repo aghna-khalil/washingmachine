@@ -1,0 +1,704 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+ 
+    /*Color*/
+  --blue-color: #0391D3;
+  --section-gray-color: #E5E5E5;
+  --gray: #EEEEEE;
+  --text-gray: #656565;
+  --card-para-gray: #AFAFAF;
+  --black-color: #000000;
+  --white: #FFFFFF;
+  --card-bg:#F6F6F6;
+  --slider-para:#A4A4A4;
+  --button-color:#F3393A;
+
+
+  /*========== Font==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font:"Roboto", sans-serif;
+  --biggest-font-size: 3rem;
+  --bigger-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 22px;
+  --small-font-size: 12px;
+  
+  --header-height: 4rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color:var(--white) ;
+}
+li{
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+h1{
+    font-weight: var(--font-bold);
+}
+i{
+    color: var(--blue-color);
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+p{
+  margin: 0;
+  padding:0;
+
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    grid-template-rows: auto;
+  }
+
+  
+}
+/*=============== REUSABLE CLASSES ===============*/
+.section{
+  padding: 4rem 2rem;
+}
+.section__title {
+  font-size: var(--bigger-font-size);
+  font-family: var(--second-font);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* ================Header============================== */
+header{
+background-color: var(--white);
+height: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav-icon .div-text p{
+    font-size: 12px;
+    color: var(--text-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+/* .navbar{
+padding: 0px 60px;
+} */
+/* =======================================header button======================== */
+.nav-button{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    width: 150px;
+}
+.nav-button a{
+    background-color: var(--blue-color);
+    border-radius: 50px;
+    padding: 10px;
+    color: var(--white);
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    
+}
+
+/* =========================banner=========================== */
+.banner{
+  background-color: var(--section-gray-color);
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   padding-left: 100px;
+   padding-top: 60px;
+
+}
+
+.text-box a{
+  background-color: var(--blue-color);
+  border-radius: 50px;
+  padding-top: 30px;
+  color: var(--white);
+  width: 350px;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  font-weight: bold;
+  font-size: var(--normal-font-size);
+  margin-left: 20px;
+}
+.text-box .text-para{
+    padding-right: 150px;
+}
+/* ==================NUMBER============== */
+.text-box .number-list{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    
+}
+.number-list .number{
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.numbering{
+  color: var(--blue-color);
+  font-size: 50px;
+  font-weight: 700;
+}
+/* =============================BANNER-imagebox=============== */
+.image-box{
+    background-image: url(/assets/semi-circle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.image-box img{
+  padding: 0px;
+  height: 562px;
+  width: 650px;
+}
+/* =================================GRID -slider================= */
+.slider{
+  background-color: var(--white);
+}
+.slider h1{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px 60px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px); 
+  grid-template-rows:250px 250px; 
+  gap: 10px; 
+}
+
+.slider .card {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: 5px 5px 5px 5px rgba(250, 250, 250,1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+}
+
+.large-card {
+  grid-row: span 2; 
+}
+
+
+ .slider .card p{
+  font-weight: 600;
+  padding:0 109px;
+ }
+ /* =====================================Slider BUTTON Portion================ */
+ .slider-bottom-text{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 40px 0;
+ }
+ .slider-bottom-text .bottom-text h2{
+    font-size: var(--bigger-font-size);
+    font-weight: bold;
+    color: var(--text-gray);
+
+ }
+ .slider-bottom-text .bottom-text p{
+  font-size: var(--normal-font-size);
+  color: var(--slider-para);
+  padding-left: 220px;
+ }
+
+/* ========================================TOOL-MAN=================== */
+.tool-text .nav-button{
+  padding: 0;
+  
+}
+.tool-text a{
+  background-color: var(--button-color);
+ 
+}
+.tool-text{
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-end;
+
+}
+/* =================================cards portion=========== */
+.card-portion{
+background-color: var(--blue-color);
+  
+}
+.color-card {
+  border-radius: 0;
+  margin-top: 10px;
+  height: 200px;
+}
+.color-card .text-holder {
+  text-align: left;
+  padding: 30px;
+
+}
+.color-card .text-holder h5{
+  font-size: 14px;
+  font-weight: 600;
+}
+.color-card .text-holder p{
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.card-portion .image-cards .colors{
+  background-image: url(assets/bag-bg.png);
+
+}
+.image-cards{
+  position: relative;
+}
+/* ==========================first card image============ */
+
+.colors .c-image{
+  position: absolute;
+  top: 37px;
+  right: 0;
+  bottom: 0;
+}
+.colors .text-holder h5 {
+  font-size: 16px;
+}
+.colors .text-holder p{
+  font-size: 12px;
+  padding-right: 70px;
+}
+/* ===============================second image card=========== */
+
+.colors-image .c-image{
+  position: absolute;
+  top: 38px;
+  right: -5px;
+  bottom: 0;
+}
+.colors-image .text-holder p{
+  padding-right: 100px;
+}
+
+/* =================third image card============== */
+.colors-img .c-image{
+  position: absolute;
+  top: 47px;
+  right: -10px;
+  bottom: 0;
+}
+.colors-img .text-holder p{
+  padding-right: 100px;
+}
+/* ================================logo-cards============================== */
+.icon-card{
+  position: relative;
+  padding: 20px;
+  padding-top: 60px; 
+  border:1px solid var(--blue-color);
+  margin: 20px;
+  border-radius: 0; 
+  height: 200px;
+}
+.card-img{
+  position: absolute;
+    top: -40px;
+    left: -10px;
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover;
+    border-radius: 0; 
+
+}
+ .icon-cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+ }
+ .icon-cards .text-side p{
+  font-size: 14px;
+  color: var(--card-para-gray);
+  
+ }
+ .icon-cards .text-side h6{
+  font-weight:var(--font-bold);
+ }
+ .logo-cards .logo-card{
+  margin-top: 40px;
+ }
+ /* ==================================round cards============================ */
+ .round-card{
+  position: relative;
+  height: 245px;
+  padding: 20px;
+  padding-top: 60px; 
+  border:1px solid var(--blue-color);
+  margin: 20px;
+  border-radius: 0; 
+  background-image: url(assets/arrows.png);
+}
+.round-img{
+  position: absolute;
+    top: -55px;
+    left: 35%;
+    object-fit: cover;
+   
+    
+
+}
+.image-cards .round-img-card
+{
+  margin-top: 50px;
+ }
+
+ .round-card .text-side p{
+  font-size: 14px;
+  color: var(--card-para-gray);
+ }
+ .round-card .text-side h6{
+  font-weight:var(--font-bold);
+ }
+ /* =================================================QUESTIONS============================= */
+ .question{
+ background-image:url(/assets/tool-BG.png);
+ }
+ #accordion{
+  width: 500px;
+  height: 65px;
+ }
+#accordion li{
+  width: 100%;
+  background-color: var(--white);
+}
+#accordion li label{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  
+}
+#accordion li label i
+{
+  color: var(--black-color);
+}
+.content p{
+  font-size: 10px;
+  padding: 19px;
+  color: var(--card-para-gray);
+}
+
+/* =================================location=================================== */
+.map-container {
+  position: relative;
+  width: 100%;
+ 
+}
+.pathway{
+  padding-top: 4rem;
+  padding-bottom: 0;
+}
+.pathway-card{
+  position: absolute;
+  top: 9px; 
+  left:210px; 
+  transform: translateX(-50%); 
+  background: var(--white);
+  padding: 10px 20px;
+  z-index:2; 
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+/* =============================FOOTER=========================== */
+footer{
+  height: 80px;
+ margin-top: 0;
+  background-color: #F5F7F9;
+}
+.footer-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.footer-text p{
+  color: var(--card-para-gray);
+  font-size: 12px;
+}
+.footer-icon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.copy-right{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.copy-right i{
+  background-color: #F5F7F9;
+  color: var(--text-gray);
+}
+
+/* ================================MEDIA QUERIES FOR RESPONSIVENESS============== */
+ 
+@media (min-width: 1024px) {
+  .image-box img{
+    padding: 0px;
+    height: 562px;
+    width: 550px;
+  }
+  .text-box .number-list{
+    gap: 50px;
+    
+}
+
+}
+@media (max-width: 1024px) {
+  .text-box .number-list{
+    gap: 20px;
+    
+}
+}
+/* ================================menubar==================== */
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: var(--white);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-left: 10px;
+
+}
+.nav-btn{
+  display: none;
+}
+
+
+@media (max-width: 992px) {
+.hideOnMobile{
+  display: none;
+
+}
+.nav-btn{
+  display: block;
+}
+
+  .grid-container {
+      grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+
+  }
+  /* .nav-icon{
+    display: none;
+  } */
+  .navbar{
+    padding: 0;
+  }
+  .image-box img{
+    padding: 0px;
+    height: 500px;
+    width: 450px;
+  }
+
+/* .nav-icon{
+  display: none;
+} */
+.text-box .number-list{
+  gap: 5px;
+  
+}
+.numbering{
+  font-size: 30px;
+  /* font-weight: 700; */
+} 
+.text-box a {
+  width: 300px;
+}
+
+
+}
+@media (max-width: 768px) {
+  .tool-image img{
+  width: 400px;
+}
+#footer .footer-text .footer-icon p{
+  display: none;
+}
+.pathway-card{
+  width: 300px;
+}
+}
+@media (max-width: 575px) {
+  .tool-image img{
+  width: 100%;
+}
+#accordion {
+  width: 400px;
+  height: 65px;
+}
+.pathway-card{
+  width: 250px;
+  left: 150px;
+}
+
+#accordion li label {
+
+  font-size: 12px;
+
+}
+.slider-bottom-text .bottom-text h2 {
+  font-size: 16px;
+  padding: 40px 10px;
+
+}
+.slider-bottom-text .bottom-text p{
+  font-size: 12px;
+  padding: 0px 5px;
+
+
+}
+.slider-bottom-text .nav-button{
+width: 564px;
+
+
+}
+
+}
+@media (max-width: 450px) {
+
+  #accordion {
+    width: 250px;
+    height: 65px;
+  }
+  
+#accordion li label {
+
+  font-size: 10px;
+
+}
+.image-box img {
+  padding: 0px;
+  height: 400px;
+  width: 290px;
+}
+.pathway-card{
+  width: 200px;
+  left: 110px;
+}
+.logo-cards{
+  padding: 4rem 0;
+}
+.question{
+  
+    padding: 4rem 0;
+  
+}
+.content p {
+
+  padding: 8px;
+ 
+}
+.section{
+  padding: 4rem 0;
+}
+.slider h1{
+  padding: 20px 0;
+}
+.pathway{
+  padding: 4rem 0;
+  padding-bottom: 0;
+}
+.text-box{
+  padding: 10px;
+}
+.icon-card{
+  height: 270px;
+  width: 250px;
+}
+/* .navbar .nav-button{
+  display: none;
+} */
+.text-box a {
+  width: 260px;
+}
+.copy-right p{
+  display: none;
+}
+
+.text-box h1{
+  font-size: 30px;
+}
+
+.text-box .text-para{
+ font-size: 18px;
+ padding: 0;
+}
+}
+  

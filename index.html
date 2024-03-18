@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- =========================bootstrap========================= -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- ========================Fonts============================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =======================CSS===================== -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- slider link -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <title>Washing Machine</title>
+  </head>
+  <body>
+    <!-- ======================HEADER===================================== -->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="sidebar">
+          <div class="nav-logo">
+            
+            <i class="nav-btn-icon fa-solid fa-xmark" name="close" onclick=hideSidebar() style="font-size: 35px;"> </i>
+          </div>
+          <div class="hideOnMobile nav-icon location">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="div-text">
+              <p>Ваш город: Алматы</p>
+            </div>
+          </div>
+          <div class="nav-icon time">
+            <i class="fa-regular fa-clock"></i>
+            <div class="div-text">
+              <p>Время работы:с</p>
+              <p style="font-weight: bold">9:30 до 18:00 Пн-Пт</p>
+            </div>
+          </div>
+          <div class="nav-icon phone">
+            <i class="fa-solid fa-phone"></i>
+            <div class="div-text">
+              <p>+7(863) 203 60 48</p>
+              <p>+7(863) 203 70 33</p>
+            </div>
+          </div>
+          <div class="nav-button">
+            <a href="#">Заказать звонок</a>
+          
+          </div>
+          <!-- <div class="nav-btn">
+            <i class="nav-btn-icon fa-solid fa-bars" name="open"> </i>
+
+            <i class="nav-btn-icon fa-solid fa-xmark" name="close"> </i>
+          </div> -->
+        </div>
+        <div class="navbar">
+          <div class="nav-logo">
+            <img src="/assets/logo-head.png" alt="LOGO_IMG" />
+          </div>
+          <div class="hideOnMobile nav-icon location">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="div-text">
+              <p>Ваш город: Алматы</p>
+            </div>
+          </div>
+          <div class="hideOnMobile nav-icon time">
+            <i class="fa-regular fa-clock"></i>
+            <div class="div-text">
+              <p>Время работы:с</p>
+              <p style="font-weight: bold">9:30 до 18:00 Пн-Пт</p>
+            </div>
+          </div>
+          <div class="hideOnMobile nav-icon phone">
+            <i class="fa-solid fa-phone"></i>
+            <div class="div-text">
+              <p>+7(863) 203 60 48</p>
+              <p>+7(863) 203 70 33</p>
+            </div>
+          </div>
+          <div class="hideOnMobile nav-button">
+            <a href="#">Заказать звонок</a>
+          
+          </div>
+          <div class="nav-btn">
+            <i class="nav-btn-icon fa-solid fa-bars" name="open" onclick=showSidebar() style="font-size: 35px;"> </i>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================banner======================================== -->
+    <section class="banner">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="text-box col-lg-5 col-md-5 col-sm-12">
+            <h1>
+              Сервисный центер
+              <span style="color: var(--blue-color)">INDESIT </span>в Алматы
+            </h1>
+            <h5>Обходитесь без лишних затрат</h5>
+
+            <a href="#">Вызвать мастера</a>
+            <p class="text-para" style="color: var(--text-gray)">
+              <span style="color: brown">*</span> Выезд и диагностика бесплатно
+              при условии ремонта
+            </p>
+            <div class="number-list">
+              <div class="number" style="display: flex">
+                <span class="numbering"> 0 </span>
+
+                <div class="num-text">
+                  <p>₸</p>
+                  <p>диагностика</p>
+                </div>
+              </div>
+              <div class="number" style="display: flex">
+                <span class="numbering"> 1 </span>
+                <div class="num-text">
+                  <p style="font-weight: bold">день</p>
+                  <p>ремонта</p>
+                </div>
+              </div>
+              <div class="number" style="display: flex">
+                <span class="numbering"> 3 </span>
+                <div class="num-text">
+                  <p style="font-weight: bold">года</p>
+                  <p>гарантии</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-box col-lg-7 col-md-7 col-sm-12">
+            <img src="/assets/washing-man.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================MAIN=======================================-->
+    <main class="main">
+
+      <!-- ==================slider======================================= -->
+      <section class="slider section">
+        <div class="container">
+          <h1>Ремонт любых побутовой техники INDESIT</h1>
+          <div class="grid-container">
+            <div class="card large-card">
+              <div class="slider-image">
+                <img src="assets/washingmachine.png" alt="washing machine" />
+              </div>
+
+              <div class="slider-text">
+                <p>Ремонт стиральных машин</p>
+              </div>
+            </div>
+            <div class="card small-card">
+              <div class="slider-image">
+                <img src="assets/refrigrator.png" alt="refigrator" />
+              </div>
+              <div class="slider-text">
+                <p>Вытяжки</p>
+              </div>
+            </div>
+            <div class="card small-card">
+              <div class="slider-image">
+                <img src="assets/spinner.png" alt="spinner" />
+              </div>
+              <div class="slider-text">
+                <p>Посудомойки</p>
+              </div>
+            </div>
+            <div class="card small-card">
+              <div class="slider-image">
+                <img src="assets/vaccum.png" alt="vaccum" />
+              </div>
+              <div class="slider-text">
+                <p>Пылесосы</p>
+              </div>
+            </div>
+            <div
+              class="card small-card"
+              style="background-color: var(--card-bg)"
+            >
+              <div class="slider-image">
+                <img src="assets/stove.png" alt="stove" />
+              </div>
+              <div class="slider-text">
+                <p>Варочные панели</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-bottom-text">
+            <div class="bottom-text">
+              <h2>Не нашли свой продукт в списке, или остались вопросы?</h2>
+              <p>Свяжитесь с менеджером по телефону +7 (778) 065-12-46 или</p>
+            </div>
+            <div class="nav-button">
+              <a href="#">Заказать звонок </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================TOOL-MAN=============================== -->
+      <section class="tool section">
+        <div
+          class="container"
+          style="background-color: var(--blue-color);"
+        >
+          <div class="row">
+            <div class="tool-text col-lg-5 col-md-12 col-sm-12">
+              <h2 style="color: var(--white)">
+                Заказать бесплатный выезд мастера за 30 мин!
+              </h2>
+              <p class="" style="color: var(--white)">
+                Выезд мастера и диагностика бесплатно, при условии ремонта, Мы
+                следим за качеством облуживания. К вам приедет мастер с опытом
+                работы не менее пяти лет. У нас быстро, от 30 минут выезд
+                мастера.
+              </p>
+              <div class="nav-button">
+                <a href="#">Заказать звонок </a>
+              </div>
+            </div>
+            <div class="tool-image col-lg-7 col-md-12 col-sm-12">
+              <img src="/assets/TOOL-MAN.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================-cards-portions======================= -->
+      <section class="card-portion section">
+        <div class="container">
+          <h1 style="text-align: center;  margin: 0 auto; padding-bottom: 20px;">
+            Сервис
+            <span style="color: var(--button-color)">INDESIT</span> предлагает
+            лучшие цены
+          </h1>
+          <div class="simple-cards">
+            <div class="row">
+              <div class="col-lg-3">
+                <div
+                  class="color-card card"
+                  style="background-color: var(--white)"
+                >
+                  <div class="text-holder">
+                    <h5>Ремонт микроволновки</h5>
+                    <p class="" style="color: var(--slider-para);">
+                      Замена слюды, магнетрона, восстановление кнопок и др
+                    </p>
+                    <p style="color: var(--button-color); " >ОТ 2500 ₸.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div
+                  class="color-card card"
+                  style="background-color: var(--white)"
+                >
+                  <div class="text-holder">
+                    <h5>Ремонт пылесоса
+                    </h5>
+                    <p class=""  style="color: var(--slider-para);">
+                      Замена или восстановление шланга, схемы управления, двигателя и пр.
+
+                    </p>
+                    <p style="color: var(--button-color);">ОТ 2500 ₸.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-3">
+                <div
+                  class="color-card card"
+                  style="background-color: var(--white)"
+                >
+                  <div class="text-holder">
+                    <h5>Ремонт микроволновки</h5>
+                    <p class="" style="color: var(--slider-para);">
+                      Замена слюды, магнетрона, восстановление кнопок и др
+                    </p>
+                    <p style="color: var(--button-color);">ОТ 2500 ₸.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div
+                  class="color-card card"
+                  style="background-color: var(--white)"
+                >
+                  <div class="text-holder">
+                    <h5>Ремонт микроволновки</h5>
+                    <p class="" style="color: var(--slider-para);">
+                      Замена слюды, магнетрона, восстановление кнопок и др
+                    </p>
+                    <p style="color: var(--button-color);">ОТ 2500 ₸.</p>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+          <div class="image-cards">
+            <div class="row">
+              <div class="col-lg-3">
+                <div
+                  class="color-card card"
+                  style="background-color: var(--white)"
+                >
+                  <div class="text-holder">
+                    <h5>Ремонт микроволновки</h5>
+                    <p class="">
+                      Замена слюды, магнетрона, восстановление кнопок и др
+                    </p>
+                    <p style="color: var(--button-color);">ОТ 2500 ₸.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="color-card card colors .first-color">
+                  <div class="color-img-card">
+                  <div class="text-holder"  style="color: var(--white)">
+                    <h5>Выезд мастера</h5>
+                    <p class=""> В удобное для Вас время. На дом или в офис!</p>
+                    <p>БЕСПЛАТНО</p>
+                  </div>
+                  <div class="c-image">
+                    <img src="assets/man.png" height="160" width="150" alt="">
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="color-card card colors colors-image" style="background-image: url(assets/card\ machine\ -bg.png);">
+                  <div class="color-img-card">
+                  <div class="text-holder"  style="color: var(--white)">
+                    <h5>Выезд мастера</h5>
+                    <p class=""> С ипользованием 
+                      современного 
+                      оборудования
+                      </p>
+                    <p>БЕСПЛАТНО</p>
+                  </div>
+                  <div class="c-image">
+                    <img src="assets/card machine.png" height="160" width="110" alt="" >
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="color-card card colors colors-img" style="background-image: url(assets/meddol-bg.png);">
+                  <div class="color-img-card">
+                  <div class="text-holder"  style="color: var(--white)">
+                    <h5>Выезд мастера</h5>
+                    <p class=""> На все запчасти и 
+                      выполненные 
+                      услуги
+                      </p>
+                    <p>БЕСПЛАТНО</p>
+                  </div>
+                  <div class="c-image">
+                    <img src="assets/meddol.png" height="150" width="140" alt="">
+                  </div>
+                </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================LOGO-CARDS=========================== -->
+      <section class="logo-cards section">
+        <div class="container">
+          <h1 style="text-align: center;  margin: 0 auto">Схема работы</h1>
+          <div class="logo-card">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="icon-card card">
+                  <img src="assets/war11.png" alt="war1" class="card-img">
+                <div class="icon-cards">
+                  <div class="icon-side">
+                    <img src="assets/icon1.png" alt="">
+                   </div>
+                    <div class="text-side">
+                      <h6>Консультация</h6>
+                      <p>Персональный менеджер
+                        ответит на все ваши вопросы и
+                        будет держать вас в курсе всех
+                        этапов работ</p>
+                    </div>
+                </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="icon-card card">
+                    <img src="assets/war11.png" alt="war1" class="card-img">
+                  <div class="icon-cards">
+                    <div class="icon-side">
+                      <img src="assets/icon 2.png" alt="">
+                     </div>
+                      <div class="text-side">
+                        <h6>Консультация</h6>
+                        <p>Персональный менеджер
+                          ответит на все ваши вопросы и
+                          будет держать вас в курсе всех
+                          этапов работ</p>
+                      </div>
+                  </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="icon-card card">
+                      <img src="assets/war11.png" alt="war1" class="card-img">
+                    <div class="icon-cards">
+                      <div class="icon-side">
+                        <img src="assets/icon3.png" alt="">
+                       </div>
+                        <div class="text-side">
+                          <h6>Консультация</h6>
+                          <p>Персональный менеджер
+                            ответит на все ваши вопросы и
+                            будет держать вас в курсе всех
+                            этапов работ</p>
+                        </div>
+                    </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-4">
+                  <div class="icon-card card">
+                    <img src="assets/war11.png" alt="war1" class="card-img">
+                  <div class="icon-cards">
+                    <div class="icon-side">
+                      <img src="assets/icon 4.png" alt="">
+                     </div>
+                      <div class="text-side">
+                        <h6>Консультация</h6>
+                        <p>Персональный менеджер
+                          ответит на все ваши вопросы и
+                          будет держать вас в курсе всех
+                          этапов работ</p>
+                      </div>
+                  </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="icon-card card">
+                      <img src="assets/war11.png" alt="war1" class="card-img">
+                    <div class="icon-cards">
+                      <div class="icon-side">
+                        <img src="assets/icon 5.png" alt="">
+                       </div>
+                        <div class="text-side">
+                          <h6>Консультация</h6>
+                          <p>Персональный менеджер
+                            ответит на все ваши вопросы и
+                            будет держать вас в курсе всех
+                            этапов работ</p>
+                        </div>
+                    </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="icon-card card">
+                        <img src="assets/war11.png" alt="war1" class="card-img">
+                      <div class="icon-cards">
+                        <div class="icon-side">
+                          <img src="assets/icon 6.png" alt="">
+                         </div>
+                          <div class="text-side">
+                            <h6>Консультация</h6>
+                            <p>Персональный менеджер
+                              ответит на все ваши вопросы и
+                              будет держать вас в курсе всех
+                              этапов работ</p>
+                          </div>
+                      </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+           
+      <!-- ============================2nd TOOL MAN======================== -->
+      <section class="tool section">
+        <div
+          class="container-fluid "
+          style="background-color: var(--blue-color);"
+          
+        >
+          <div class="row">
+            <div class="tool-text col-lg-5 col-md-12 col-sm-12">
+              <h2 style="color: var(--white)">
+                Получите скидку 15% прямо сейчас!
+              </h2>
+              <p class="" style="color: var(--white)">
+                Вы выбираете LG, а мы в знак благодарности дарим Вам скидку 15% на все виды ремонтных работ в нашем центре!.
+              </p>
+              <div class="nav-button" style="width: 200px;">
+                <a href="#">Получить скидку 15% </a>
+              </div>
+            </div>
+            <div class="tool-image col-lg-7 col-md-12 col-sm-12">
+              <img src="/assets/2 TOOLMAN.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============================image-cards======================= -->
+      <section class="image-cards section">
+        <div class="container">
+          <h1 style="text-align: center;  margin: 0 auto">Отзывы</h1>
+          <div class="round-img-card">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="round-card card">
+                  <img src="assets/round1.png" alt="round1" class="round-img">
+                    <div class="text-side">
+                      <h6>Константин </h6>
+                      <p>С сайтом и сервисом этой компании всё просто отлично! Качество товара соответствует заявленному. Буду и впреть пользоваться товарами с этого сайта, и смело могу рекомендовать его людям.</p>
+                    </div>
+               
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="round-card card">
+                    <img src="assets/round 2.png" alt="round1" class="round-img">
+                      <div class="text-side">
+                        <h6>Алина </h6>
+                        <p>Хочу выразить благодарность компании за качественно выполненную работу по ремонту стиральной машины! Все было качественно и оперативно: от принятия заявки диспетчером до работы мастера! </p>
+                      </div>
+                 
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="round-card card">
+                      <img src="assets/round3.png" alt="round1" class="round-img">
+                        <div class="text-side">
+                          <h6>Дмитрий</h6>
+                          <p>Благодарны за качественное и профессиональное обслуживание, быстро откликнулись. Мастер Сергей приехал в назначенное время, сделал все хорошо</p>
+                        </div>
+                   
+                      </div>
+                    </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ==========================question-section====================== -->
+      <section class="question section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="QA">
+                <ul id="accordion">
+                  <li>
+                    <label for="first">Как узнать стоимость ремонта? <span><i class="fa-solid fa-angle-down"></i></span></label>
+                  </li>
+  
+                </ul>
+                <ul id="accordion">
+                  <li>
+                    <label for="first">Сколько будет длиться диагностика?<span><i class="fa-solid fa-angle-down"></i></span></label>
+                  </li>
+  
+                </ul>
+                <ul id="accordion">
+                  <li>
+                    <label for="first"> Даете ли вы гарантию на ремонт?<span><i class="fa-solid fa-angle-down"></i></span></label>
+                  </li>
+  
+                </ul>
+                
+              </div>              
+
+            </div>
+            <div class="col-lg-6">
+              <div class="QA">
+                <ul id="accordion">
+                  <li>
+                    <label for="first">Можно ли вызвать мастера на дом или в офис?<span><i class="fa-solid fa-angle-down"></i></span></label>
+                  </li>
+  
+                </ul>
+                <ul id="accordion">
+                  <li>
+                    <label for="first">Сколько будет длиться диагностика?<span><i class="fa-solid fa-angle-down"></i></span></label>
+                  <div class="content">
+                    <p>После ремонта устройства проходят контроль качества выполненной работы по 
+                      47 пунктам. Это означает, что после ремонта вы получите устройство с работоспособностью в 100%.</p>
+                  </div>
+                  </li>
+  
+                </ul>
+                
+                
+              </div> 
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <!-- ===========================location============================= -->
+      <section class="pathway section" >
+        <div class="map-container">
+          <div class="pathway-card card">
+            <h2>Контакты</h2>
+            <div class="nav-icons location">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="div-text">
+                <p>Ваш город: Алматы</p>
+              </div>
+            </div>
+            <div class="nav-icons time">
+              <i class="fa-regular fa-clock"></i>
+              <div class="div-text">
+                <p>Время работы:с</p>
+                <p style="font-weight: bold">9:30 до 18:00 Пн-Пт</p>
+              </div>
+            </div>
+            <div class="nav-icons phone">
+              <i class="fa-solid fa-phone"></i>
+              <div class="div-text">
+                <p>+7(863) 203 60 48</p>
+                <p>+7(863) 203 70 33</p>
+              </div>
+            </div>
+            <div class="nav-button">
+              <a href="#">Заказать звонок</a>
+            </div>
+            </div>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.8110628934737!2d74.26915457469435!3d31.474383149414297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903faca59cd85%3A0xa3c4dfb7c526f035!2sProgrammers%20Force!5e0!3m2!1sen!2s!4v1710488617017!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+        </div>
+      
+      </section>
+
+      <!-- ============FOOTER============= -->
+      <footer class="footer" id="footer">
+          <div class="container">
+          <div class="footer-text">
+            <div class="footer-icon">
+              <img src="assets/logo-head.png" alt="logo">
+              <p>Ремонт бытовой техники в Алматы. <br>
+                Обслуживание по Европейским стандартам качества</p>
+             </div>
+            <div class="copy-right">
+              <p>Все права защищены,
+                Алматы 2019</p>
+                <i class="fa-solid fa-circle-arrow-up"></i>
+            </div>
+
+          </div>
+      </div>
+     </footer>
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+
+      +JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/77503ea7eb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display ='flex'
+
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display ='none'
+      }
+    </script>
+  </body>
+</html>
