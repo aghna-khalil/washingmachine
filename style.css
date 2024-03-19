@@ -300,11 +300,21 @@ background-color: var(--blue-color);
 }
 
 .card-portion .image-cards .colors{
+  position: relative;
   background-image: url(assets/bag-bg.png);
+  background-size: cover;
+  background-position: center;
 
 }
-.image-cards{
-  position: relative;
+.card-portion .image-cards .colors::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(243, 92, 92, 0.5);  */
+  z-index: 1;
+  content: '';
 }
 /* ==========================first card image============ */
 
@@ -579,7 +589,10 @@ footer{
   /* font-weight: 700; */
 } 
 .text-box a {
-  width: 300px;
+  width: 246px;
+}
+.text-box .text-para{
+  padding-right: 10px;
 }
 
 
@@ -682,9 +695,7 @@ width: 564px;
   height: 270px;
   width: 250px;
 }
-/* .navbar .nav-button{
-  display: none;
-} */
+
 .text-box a {
   width: 260px;
 }
