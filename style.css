@@ -189,7 +189,7 @@ padding: 0px 60px;
 }
 /* =============================BANNER-imagebox=============== */
 .image-box{
-    background-image: url(/assets/semi-circle.png);
+    background-image: url(assets/semi-circle.png);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -425,7 +425,7 @@ background-color: var(--blue-color);
  }
  /* =================================================QUESTIONS============================= */
  .question{
- background-image:url(/assets/tool-BG.png);
+ background-image:url(assets/tool-BG.png);
  }
  #accordion{
   width: 500px;
